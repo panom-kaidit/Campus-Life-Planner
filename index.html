@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Campus Life Planner - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="styles/base.css" />
+    <!-- <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/responsive.css" /> -->
+    <link rel="stylesheet" href="styles/dashbord.css" />
+  </head>
+
+  <body class="dashboard-page">
+    <!-- ========================= HEADER ========================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Campus Life Planner</h1>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html" aria-current="page">Dashboard</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="add.html">Add Task</a></li>
+            <li><a href="reflection.html">Reflection</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========================= MAIN CONTENT ========================== -->
+    <main class="main-content">
+      <div class="container dashboard-wrapper">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+          <div class="welcome-inner">
+            <h2>Welcome Back <i class="fa-solid fa-hand-wave"></i></h2>
+            <p class="current-date" id="currentDate"></p>
+          </div>
+        </section>
+
+        <!-- ========================= DASHBOARD STATISTICS ========================== -->
+        <section class="stats-section">
+          <header class="section-header">
+            <h3>Planner Overview</h3>
+          </header>
+
+          <div class="stats-grid">
+            <!-- Total Tasks -->
+            <article class="stat-card">
+              <div class="stat-card-inner">
+                <h4 class="stat-title">Total Tasks</h4>
+                <p id="stat-total" class="stat-value">0</p>
+              </div>
+            </article>
+
+            <!-- Total Duration -->
+            <article class="stat-card">
+              <div class="stat-card-inner">
+                <h4 class="stat-title">Total Duration</h4>
+                <p id="stat-duration" class="stat-value">0</p>
+              </div>
+            </article>
+
+            <!-- Top Tag -->
+            <article class="stat-card">
+              <div class="stat-card-inner">
+                <h4 class="stat-title">Top Tag</h4>
+                <p id="stat-top-tag" class="stat-value">-</p>
+              </div>
+            </article>
+
+            <!-- Reflection -->
+            <article class="stat-card">
+              <div class="stat-card-inner">
+                <h4 class="stat-title">Reflection</h4>
+                <p class="stat-value">
+                  <i class="fa-solid fa-fire"></i> Streak:
+                  <strong id="streakCount">0</strong> days
+                </p>
+              </div>
+            </article>
+
+            <!-- Upcoming Trend -->
+            <article class="stat-card stat-card-trend">
+              <div class="stat-card-inner">
+                <h4 class="stat-title">Upcoming (Next 7 Days)</h4>
+                <p id="stat-trend" class="stat-value">0</p>
+
+                <div class="trend-bar">
+                  <div id="trend-fill" class="trend-fill"></div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p id="cap-message" class="cap-message"></p>
+        </section>
+
+        <!-- ========================= TODAY'S UPCOMING EVENTS ========================== -->
+        <section class="today-section">
+          <header class="section-header">
+            <h3>Today's Upcoming</h3>
+          </header>
+
+          <div class="today-grid">
+            <article class="today-card">
+              <div class="today-card-inner">
+                <h4><i class="fa-solid fa-book"></i> Assignments</h4>
+                <div id="today-assignments" class="today-content"></div>
+              </div>
+            </article>
+
+            <article class="today-card">
+              <div class="today-card-inner">
+                <h4><i class="fa-solid fa-school"></i> Classes</h4>
+                <div id="today-classes" class="today-content"></div>
+              </div>
+            </article>
+
+            <article class="today-card">
+              <div class="today-card-inner">
+                <h4><i class="fa-solid fa-calendar-check"></i> Events</h4>
+                <div id="today-events" class="today-content"></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ========================= FOOTER ========================== -->
+    <footer class="site-footer">
+      <p>© 2026 Campus Life Planner</p>
+    </footer>
+
+    <!-- ========================= SCRIPTS ========================== -->
+    <script src="scripts/settingsj.js"></script>
+    <script type="module" src="scripts/mainj.js"></script>
+    <script type="module" src="scripts/reflection.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campus Life Planner - Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <!-- <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/responsive.css" /> -->
+  <link rel="stylesheet" href="styles/settings.css" />
+</head>
+
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Campus Life Planner</h1>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="add.html">Add Task</a></li>
+            <li><a href="reflection.html" class="active">Reflection</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="settings-container container">
+      <h2 class="page-title">⚙ Settings</h2>
+
+      <!-- Theme Toggle -->
+      <div class="setting-group">
+        <label for="theme-toggle">Theme Mode</label>
+        <select id="theme-toggle">
+          <option value="light">Light Mode</option>
+          <option value="dark">Dark Mode</option>
+        </select>
+      </div>
+
+      <!-- Units -->
+      <div class="setting-group">
+        <label for="unit-toggle">Display Units</label>
+        <select id="unit-toggle">
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+        </select>
+      </div>
+
+      <!-- Weekly Cap -->
+      <div class="setting-group">
+        <label for="cap">Weekly Duration Cap</label>
+        <input id="cap" type="number" placeholder="Enter number" />
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+
+  <script type="module" src="scripts/mainj.js"></script>
+  <script src="scripts/settingsj.js"></script>
+</body>
+</html>

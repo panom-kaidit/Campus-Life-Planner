@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Campus Life Planner - Reflection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Existing Planner CSS -->
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <!-- awsome fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Reflection CSS -->
+    <link rel="stylesheet" href="styles/reflection.css" />
+  </head>
+
+  <body class="reflection-page">
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Campus Life Planner</h1>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="add.html">Add Task</a></li>
+            <li><a href="reflection.html" class="active">Reflection</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main-content">
+      <div class="container container-narrow reflection-wrapper">
+        <!-- Page Header -->
+        <section class="page-header reflection-header">
+          <!-- <div class="page-header-actions"></div> -->
+
+          <div class="page-header-text">
+            <h2><i class="fa-solid fa-book-open"></i> Daily Reflection</h2>
+            <p>Take a moment to reflect on your day and track your growth</p>
+          </div>
+        </section>
+
+        <!-- ================= DATE NAVIGATION ================= -->
+        <section class="date-navigator">
+          <div class="date-nav-controls">
+            <button class="btn-icon" id="prevDayBtn">←</button>
+
+            <div class="current-reflection-date">
+              <strong id="reflectionDate"></strong>
+              <span
+                id="todayIndicator"
+                class="badge badge-success"
+                style="display: none"
+              >
+                Today
+              </span>
+            </div>
+
+            <button class="btn-icon" id="nextDayBtn">→</button>
+            <button class="btn btn-secondary btn-sm" id="todayBtn">
+              Today
+            </button>
+          </div>
+        </section>
+
+        <!-- ================= REFLECTION FORM ================= -->
+        <section class="card reflection-card">
+          <div class="card-header">
+            <h3 id="formTitle">New Reflection</h3>
+          </div>
+
+          <form id="reflectionForm" class="card-body reflection-form">
+            <div class="form-group">
+              <label for="learned">
+                What did I learn today? <i class="fa-solid fa-lightbulb"></i>
+              </label>
+              <textarea id="learned" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="challenges">
+                What challenges did I face? <i class="fa-solid fa-bullseye"></i>
+              </label>
+              <textarea id="challenges" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="grateful">
+                What am I grateful for?
+                <i class="fa-solid fa-hands-praying"></i>
+              </label>
+              <textarea id="grateful" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="mood">Mood Today</label>
+              <select id="mood">
+                <option value="">Select mood</option>
+                <option>Great</option>
+                <option>Good</option>
+                <option>Okay</option>
+                <option>Tough</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="additionalNotes">
+                Additional Notes <i class="fa-solid fa-pen-to-square"></i>
+              </label>
+              <textarea id="additionalNotes" rows="3"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-block">
+                Save Reflection
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- ================= STREAK ================= -->
+        <section class="streak-section">
+          <p class="streak-text">
+            <i class="fa-solid fa-fire"></i> Streak:
+            <strong id="streakCount">0</strong> days
+          </p>
+        </section>
+
+        <!-- ================= HISTORY ================= -->
+        <section class="card reflection-history-card">
+          <div class="card-header">
+            <h3>Reflection History</h3>
+            <button id="exportReflections" class="btn btn-outline">
+              Export Reflections
+            </button>
+          </div>
+
+          <div
+            id="reflectionHistory"
+            class="card-body reflection-history"
+          ></div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="scripts/settingsj.js"></script>
+    <script type="module" src="scripts/reflection.js"></script>
+  </body>
+</html>

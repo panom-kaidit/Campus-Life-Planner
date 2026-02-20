@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Campus Life Planner - Records</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <!-- <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/responsive.css" /> -->
+    <link rel="stylesheet" href="/styles/records.css" />
+  </head>
+
+  <body class="records-page">
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Campus Life Planner</h1>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="records.html" aria-current="page">Records</a></li>
+            <li><a href="add.html">Add Task</a></li>
+            <li><a href="reflection.html">Reflection</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main-content">
+      <div class="container records-wrapper">
+        
+        <!-- Page Header -->
+        <section class="records-header">
+          <h2>All Tasks</h2>
+        </section>
+
+        <!-- ================= CONTROLS ================= -->
+        <section class="records-controls">
+          
+          <div class="controls-row controls-search-sort">
+            <div class="control-group search-group">
+              <label for="search" class="control-label">Search</label>
+              <input
+                id="search"
+                class="control-input"
+                placeholder="Search (regex supported)"
+              />
+            </div>
+
+            <div class="control-group sort-group">
+              <label for="sort" class="control-label">Sort</label>
+              <select id="sort" class="control-select">
+                <option value="date-asc">Date ↑</option>
+                <option value="date-desc">Date ↓</option>
+                <option value="title-asc">Title A-Z</option>
+                <option value="title-desc">Title Z-A</option>
+                <option value="duration-asc">Duration ↑</option>
+                <option value="duration-desc">Duration ↓</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Import / Export -->
+          <div class="controls-row controls-import-export">
+            <div class="import-export">
+              <button id="export-btn" class="btn btn-secondary">
+                Export Tasks
+              </button>
+
+              <label class="import-label btn btn-outline">
+                Import Tasks
+                <input
+                  type="file"
+                  id="import-file"
+                  accept=".json"
+                  hidden
+                />
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= RECORDS LIST ================= -->
+        <section class="records-list-section">
+          <div id="records-container" class="records-container"></div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="scripts/settingsj.js"></script>
+    <script type="module" src="scripts/mainj.js"></script>
+  </body>
+</html>

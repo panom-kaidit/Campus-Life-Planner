@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — CampusLife Planner</title>
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="styles/dark-theme.css" />
+    <style>
+      .nav-title {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 18px;
+        font-size: 14px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* ===== MAIN ===== */
+      main {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 28px;
+        background: var(--color-card); /* ✅ dark-mode friendly */
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .contact-box {
+        margin-top: 24px;
+        padding: 16px;
+        background: var(--color-card); /* ✅ dark-mode friendly */
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+      }
+      /* dark mode */
+      body.dark-mode main {
+        background: var(--card-bg);
+      }
+
+      body.dark-mode .contact-box {
+        background: var(--card-bg);
+      }
+
+      footer {
+        text-align: center;
+        padding: 24px;
+        color: var(--color-text);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Campus Life Planner</h1>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="add.html">Add Task</a></li>
+            <li><a href="reflection.html">Reflection</a></li>
+            <li><a href="settings.html">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <h1>About CampusLife Planner</h1>
+
+      <h2>Purpose of the App</h2>
+      <p>
+        CampusLife Planner is a student-focused productivity system designed to
+        help manage academic responsibilities in one organized space. The app
+        allows users to track assignments, schedules, classes, and events while
+        providing helpful dashboard insights.
+      </p>
+
+      <p>
+        The goal of the system is to simplify campus life by improving time
+        management, reducing missed deadlines, and giving students clear
+        visibility into their workload.
+      </p>
+
+      <div class="contact-box">
+        <h2>Contact & Developer</h2>
+        <p><strong>GitHub:</strong><a href="https://github.com/panom-kaidit">https://github.com/panom-kaidit</a></p>
+        <p><strong>Email:</strong><a href="p.makuei@alu.student.com">p.makuei@alu.student.com</a></p>
+      </div>
+    </main>
+
+    <footer>© 2026 CampusLife Planner -Kaidit</footer>
+    <script src="scripts/settingsj.js"></script>
+  </body>
+</html>

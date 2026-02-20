@@ -1,4 +1,5 @@
 // Import necessary functions
+import { getReflectionStreak } from "./reflection.js";
 import { addRecord, deleteRecord, updateRecord, records } from "./state.js";
 import { renderRecords, renderDashboard, sortRecords } from "./ui.js";
 import { compileRegex } from "./search.js";
@@ -11,26 +12,40 @@ import {
 import { loadSettings, saveSettings } from "./settings.js";
 import { saveToStorage } from "./storage.js";
 
+/* ================= ADD PAGE DROPDOWN ================= */
+
 const taskType = document.getElementById("taskType");
 const sections = document.querySelectorAll(".task-section");
+const defaultTask = document.getElementById("defaultTask");
 
 if (taskType) {
-  const defaultTask = document.getElementById("defaultTask");
+  // Initial state on page load
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
+  if (defaultTask) defaultTask.style.display = "block";
 
+  // When dropdown changes
   taskType.addEventListener("change", () => {
+    // Hide everything first
     sections.forEach(section => {
       section.style.display = "none";
     });
 
+    // If nothing selected → show quick add
     if (!taskType.value) {
-      defaultTask.style.display = "block";
+      if (defaultTask) defaultTask.style.display = "block";
       return;
     }
 
-    defaultTask.style.display = "none";
+    // Hide quick add
+    if (defaultTask) defaultTask.style.display = "none";
 
+    // Show selected section
     const selected = document.getElementById(taskType.value + "-section");
-    if (selected) selected.style.display = "block";
+    if (selected) {
+      selected.style.display = "block";
+    }
   });
 }
 // Load settings from localStorage
@@ -39,6 +54,11 @@ let settings = loadSettings();
 // ---------------- DASHBOARD PAGE ----------------
 if (document.getElementById("stat-total")) {
   renderDashboard(records, settings.unit, settings.cap);
+
+  const streakEl = document.getElementById("streakCount");
+  if (streakEl && typeof getReflectionStreak === "function") {
+    streakEl.textContent = getReflectionStreak();
+  }
 }
 
 // ---------------- RECORDS PAGE ----------------
@@ -274,9 +294,10 @@ if (assignmentForm) {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     });
-
-    alert("Assignment added!");
-    assignmentForm.reset();
+      alert("Assignment added!");
+      assignmentForm.reset();
+      renderTodayUpcomingFromRecords();
+      renderDashboard(records, settings.unit, settings.cap);
   });
 }
 
@@ -311,9 +332,10 @@ if (scheduleForm) {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     });
-
-    alert("Schedule added!");
+    alert("schedule added!");
     scheduleForm.reset();
+    renderTodayUpcomingFromRecords();
+    renderDashboard(records, settings.unit, settings.cap);
   });
 }
 
@@ -347,9 +369,10 @@ if (eventForm) {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     });
-
-    alert("Event added!");
+    alert("event added!");
     eventForm.reset();
+    renderTodayUpcomingFromRecords();
+    renderDashboard(records, settings.unit, settings.cap);
   });
 }
 
@@ -382,9 +405,10 @@ if (classForm) {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     });
-
-    alert("Class added!");
-    classForm.reset();
+    alert("class added!");
+    classForm.reset()
+    renderTodayUpcomingFromRecords();
+    renderDashboard(records, settings.unit, settings.cap);
   });
 }
 

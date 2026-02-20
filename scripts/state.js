@@ -19,24 +19,17 @@ export function addRecord(record) {
 
 /* Delete a record */
 export function deleteRecord(id) {
-
-  records = records.filter(function (record) {
-    return record.id !== id;
-  });
-
+  const index = records.findIndex(r => r.id === id);
+  if (index !== -1) {
+    records.splice(index, 1);
+  }
   saveToStorage(records);
 }
 /* Update existing record */
 export function updateRecord(updatedRecord) {
-
-  records = records.map(function (record) {
-
-    if (record.id === updatedRecord.id) {
-      return updatedRecord;
-    }
-
-    return record;
-  });
-
+  const index = records.findIndex(r => r.id === updatedRecord.id);
+  if (index !== -1) {
+    records[index] = updatedRecord;
+  }
   saveToStorage(records);
 }

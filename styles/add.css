@@ -42,7 +42,9 @@
   gap: 0.35rem;
   max-width: 320px;
 }
-
+.task-section {
+  display: none;
+}
 .control-label {
   font-size: 0.85rem;
   font-weight: 600;

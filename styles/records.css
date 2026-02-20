@@ -1,0 +1,179 @@
+/* ========================================
+   Records Page Base
+======================================== */
+
+.records-page {
+  --records-gap: 1rem;
+  --records-radius: 14px;
+  --records-border: var(--border-color, #e5e7eb);
+  --records-bg: var(--card-bg, #ffffff);
+}
+
+/* ========================================
+   Header
+======================================== */
+
+.records-header {
+  margin-bottom: 1.25rem;
+}
+
+.records-header h2 {
+  margin: 0;
+}
+
+/* ========================================
+   Controls Section
+======================================== */
+
+.records-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--records-gap);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--records-border);
+  border-radius: var(--records-radius);
+  background: var(--records-bg);
+}
+
+/* rows */
+
+.controls-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* ========================================
+   Control Groups
+======================================== */
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 180px;
+  flex: 1;
+}
+
+/* labels */
+
+.control-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+/* inputs */
+
+.control-input,
+.control-select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--records-border);
+  font: inherit;
+  background: var(--input-bg, #fff);
+  transition: all 0.2s ease;
+}
+
+.control-input:focus,
+.control-select:focus {
+  outline: none;
+  border-color: var(--primary-color, #4f46e5);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* ========================================
+   Import / Export
+======================================== */
+
+.controls-import-export {
+  justify-content: flex-end;
+}
+
+.import-export {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.import-label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================
+   Records Container
+======================================== */
+
+.records-list-section {
+  margin-top: 0.5rem;
+}
+
+.records-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ========================================
+   Future Task Cards (auto-ready)
+======================================== */
+
+.record-card {
+  background: var(--records-bg);
+  border: 1px solid var(--records-border);
+  border-radius: var(--records-radius);
+  padding: 0.9rem 1rem;
+  transition: all 0.22s ease;
+}
+
+.record-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* empty state helper */
+
+.records-container:empty::after {
+  content: "No tasks found.";
+  display: block;
+  text-align: center;
+  padding: 2rem 1rem;
+  opacity: 0.6;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 768px) {
+  .controls-row {
+    align-items: stretch;
+  }
+
+  .control-group {
+    min-width: unset;
+  }
+
+  .controls-import-export {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .records-controls {
+    padding: 0.85rem;
+  }
+
+  .control-input,
+  .control-select {
+    padding: 0.55rem 0.65rem;
+  }
+}

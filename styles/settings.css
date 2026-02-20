@@ -1,0 +1,79 @@
+/* =========================
+   Settings Page Styles
+========================= */
+
+/* Page Title */
+.page-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Settings Container */
+.settings-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Individual Setting Group */
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Labels */
+.setting-group label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Inputs and Selects */
+.setting-group select,
+.setting-group input[type="number"] {
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #dcdcdc);
+  font-size: 0.95rem;
+  background: var(--input-bg, #ffffff);
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus State */
+.setting-group select:focus,
+.setting-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color, #4a90e2);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
+}
+
+/* Dark Mode Support */
+body.dark-mode .settings-container {
+  background: #1e1e1e;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .setting-group select,
+body.dark-mode .setting-group input[type="number"] {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .settings-container {
+    margin: 1rem;
+    padding: 1.4rem;
+  }
+
+  .page-title {
+    font-size: 1.4rem;
+  }
+}

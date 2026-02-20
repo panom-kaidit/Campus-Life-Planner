@@ -1,0 +1,196 @@
+/* ========================================
+   Reflection Page Styles
+======================================== */
+
+.reflection-page {
+  --reflection-gap: 1.25rem;
+}
+
+/* ========================================
+   Header Section
+======================================== */
+
+.reflection-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--reflection-gap);
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-header-text h2 {
+  margin: 0;
+}
+
+.page-header-text p {
+  margin: 0.25rem 0 0;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   Date Navigator
+======================================== */
+
+.date-navigator {
+  margin-bottom: 1.5rem;
+}
+
+.date-nav-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: var(--card-bg, #f7f9fc);
+}
+
+.current-reflection-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 160px;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* ========================================
+   Reflection Card
+======================================== */
+
+.reflection-card {
+  margin-bottom: 1.5rem;
+}
+
+.reflection-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ========================================
+   Form Elements
+======================================== */
+
+.reflection-form textarea,
+.reflection-form select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color, #dcdfe6);
+  font: inherit;
+  background: var(--input-bg, #fff);
+  transition: all 0.2s ease;
+}
+
+.reflection-form textarea:focus,
+.reflection-form select:focus {
+  outline: none;
+  border-color: var(--primary-color, #4f46e5);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Labels */
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Submit area */
+
+.form-actions {
+  margin-top: 0.5rem;
+}
+
+/* ========================================
+   Streak Section
+======================================== */
+
+.streak-section {
+  text-align: center;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.streak-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* ========================================
+   History Section
+======================================== */
+
+.reflection-history-card {
+  margin-bottom: 2rem;
+}
+
+.reflection-history {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Individual history item (future-proof) */
+
+.reflection-item {
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: var(--card-bg, #f7f9fc);
+  border: 1px solid var(--border-color, #e5e7eb);
+}
+
+/* ========================================
+   Buttons polish (optional enhancement)
+======================================== */
+
+.btn-icon {
+  min-width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 768px) {
+  .reflection-header {
+    align-items: flex-start;
+  }
+
+  .date-nav-controls {
+    justify-content: center;
+  }
+
+  .current-reflection-date {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .reflection-form {
+    gap: 0.85rem;
+  }
+
+  .page-header-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .streak-text {
+    font-size: 1rem;
+  }
+}

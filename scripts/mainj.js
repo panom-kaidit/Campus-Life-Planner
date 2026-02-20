@@ -300,7 +300,9 @@ if (assignmentForm) {
       alert("Assignment added!");
       assignmentForm.reset();
       renderTodayUpcomingFromRecords();
-      renderDashboard(records, settings.unit, settings.cap);
+      if (document.getElementById("stat-total")) {
+  renderDashboard(records, settings.unit, settings.cap);
+}
   });
 }
 
@@ -338,7 +340,9 @@ if (scheduleForm) {
     alert("schedule added!");
     scheduleForm.reset();
     renderTodayUpcomingFromRecords();
-    renderDashboard(records, settings.unit, settings.cap);
+    if (document.getElementById("stat-total")) {
+  renderDashboard(records, settings.unit, settings.cap);
+}
   });
 }
 
@@ -375,7 +379,9 @@ if (eventForm) {
     alert("event added!");
     eventForm.reset();
     renderTodayUpcomingFromRecords();
-    renderDashboard(records, settings.unit, settings.cap);
+    if (document.getElementById("stat-total")) {
+  renderDashboard(records, settings.unit, settings.cap);
+  }
   });
 }
 
@@ -411,7 +417,9 @@ if (classForm) {
     alert("class added!");
     classForm.reset()
     renderTodayUpcomingFromRecords();
-    renderDashboard(records, settings.unit, settings.cap);
+    if (document.getElementById("stat-total")) {
+  renderDashboard(records, settings.unit, settings.cap);
+}
   });
 }
 

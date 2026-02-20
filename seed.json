@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "title": "Math Assignment 1",
+    "type": "assignment",
+    "course": "MTH101",
+    "duration": 60,
+    "tag": "math",
+    "dueDate": "2026-01-15"
+  },
+  {
+    "id": 2,
+    "title": "Physics Lab Report",
+    "type": "assignment",
+    "course": "PHY202",
+    "duration": 120,
+    "tag": "science",
+    "dueDate": "2025-12-31"
+  },
+  {
+    "id": 3,
+    "title": "Study Session - Final Exams",
+    "type": "schedule",
+    "day": "Monday",
+    "startTime": "08:00",
+    "endTime": "10:30",
+    "duration": 150,
+    "tag": "revision",
+    "dueDate": "2026-05-10"
+  },
+  {
+    "id": 4,
+    "title": "Group Project Meeting (Zoom)",
+    "type": "event",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "duration": 60,
+    "tag": "group-work",
+    "dueDate": "2026-02-20"
+  },
+  {
+    "id": 5,
+    "title": "Computer Science Lecture",
+    "type": "class",
+    "instructor": "Dr. Smith",
+    "room": "Room 204",
+    "duration": 90,
+    "tag": "cs",
+    "dueDate": "2026-03-01"
+  },
+  {
+    "id": 6,
+    "title": "Very Long Research Paper Title About Artificial Intelligence and Ethics in Modern Society",
+    "type": "assignment",
+    "course": "CSC450",
+    "duration": 480,
+    "tag": "AI & Ethics",
+    "dueDate": "2027-01-01"
+  },
+  {
+    "id": 7,
+    "title": "1-Minute Quick Review",
+    "type": "schedule",
+    "day": "Friday",
+    "startTime": "12:00",
+    "endTime": "12:01",
+    "duration": 1,
+    "tag": "quick",
+    "dueDate": "2026-02-20"
+  },
+  {
+    "id": 8,
+    "title": "Mega Study Marathon",
+    "type": "schedule",
+    "day": "Saturday",
+    "startTime": "06:00",
+    "endTime": "22:00",
+    "duration": 960,
+    "tag": "intense",
+    "dueDate": "2026-06-30"
+  },
+  {
+    "id": 9,
+    "title": "Special Characters Test !@#$%^&*()_+[]{}",
+    "type": "event",
+    "duration": 45,
+    "tag": "test-case",
+    "dueDate": "2025-02-28"
+  },
+  {
+    "id": 10,
+    "title": "Past Deadline Example",
+    "type": "assignment",
+    "course": "HIS300",
+    "duration": 75,
+    "tag": "history",
+    "dueDate": "2023-10-01"
+  },
+  {
+    "id": 11,
+    "title": "Edge Date - Leap Year",
+    "type": "event",
+    "duration": 30,
+    "tag": "leap-year",
+    "dueDate": "2028-02-29"
+  },
+  {
+    "id": 12,
+    "title": "Huge Duration Task",
+    "type": "assignment",
+    "course": "ENG999",
+    "duration": 1500,
+    "tag": "long-work",
+    "dueDate": "2026-12-12"
+  }
+]
+

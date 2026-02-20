@@ -53,7 +53,10 @@ let settings = loadSettings();
 
 // ---------------- DASHBOARD PAGE ----------------
 if (document.getElementById("stat-total")) {
+
   renderDashboard(records, settings.unit, settings.cap);
+
+  renderTodayUpcomingFromRecords(); // ✅ ADD THIS HERE
 
   const streakEl = document.getElementById("streakCount");
   if (streakEl && typeof getReflectionStreak === "function") {

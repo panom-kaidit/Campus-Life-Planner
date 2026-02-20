@@ -5,7 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const root = document.documentElement;
+  const root = document.body;
   const themeToggle = document.getElementById("theme-toggle");
 
   /* Apply Theme */

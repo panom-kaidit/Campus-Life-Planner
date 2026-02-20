@@ -1,0 +1,151 @@
+/* =========================
+   Global Dark Theme
+   Activated by: body.dark-mode
+========================= */
+
+body.dark-mode {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --input-bg: #2a2a2a;
+  --text-color: #e6e6e6;
+  --muted-text: #a0a0a0;
+  --border-color: #3a3a3a;
+  --primary-color: #6aa8ff;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* =========================
+   Base Elements
+========================= */
+
+body.dark-mode a {
+  color: var(--primary-color);
+}
+
+body.dark-mode hr {
+  border-color: var(--border-color);
+}
+
+/* =========================
+   Header
+========================= */
+
+body.dark-mode .site-header {
+  background: #181818;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* =========================
+   Navigation
+========================= */
+
+body.dark-mode .site-nav,
+body.dark-mode .nav-list {
+  background: #181818;
+}
+
+body.dark-mode .site-nav a,
+body.dark-mode .nav-list a {
+  color: var(--text-color);
+}
+
+body.dark-mode .site-nav a:hover,
+body.dark-mode .nav-list a:hover {
+  color: var(--primary-color);
+}
+
+/* =========================
+   Cards / Containers
+========================= */
+
+body.dark-mode .card,
+body.dark-mode .settings-container,
+body.dark-mode .records-container,
+body.dark-mode .form-container {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   Inputs
+========================= */
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: var(--input-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: var(--muted-text);
+}
+
+/* Focus */
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(106, 168, 255, 0.25);
+}
+
+/* =========================
+   Buttons
+========================= */
+
+body.dark-mode button {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+}
+
+body.dark-mode button:hover {
+  filter: brightness(1.1);
+}
+
+/* Secondary / outline buttons (safe fallback) */
+body.dark-mode button.secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+/* =========================
+   Tables (if you add later)
+========================= */
+
+body.dark-mode table {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border-color: var(--border-color);
+}
+
+/* =========================
+   Scrollbar (modern browsers)
+========================= */
+
+body.dark-mode ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 8px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

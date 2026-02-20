@@ -1,0 +1,262 @@
+/* ========================================
+   Dashboard Page Base
+======================================== */
+
+.dashboard-page {
+  --card-radius: 16px;
+  --card-padding: 1.25rem;
+  --card-bg-soft: var(--card-bg, #ffffff);
+  --card-border: var(--border-color, #e5e7eb);
+  --primary-soft: rgba(79, 70, 229, 0.08);
+}
+
+/* ========================================
+   Welcome Section
+======================================== */
+
+.welcome-section {
+  margin-bottom: 1.75rem;
+}
+
+.welcome-inner h2 {
+  margin-bottom: 0.25rem;
+}
+
+.current-date {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   Section Header
+======================================== */
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+/* ========================================
+   Stats Grid
+======================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   Stat Cards
+======================================== */
+
+.stat-card {
+  background: var(--card-bg-soft);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 0; /* inner handles padding */
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle hover lift */
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* inner wrapper */
+
+.stat-card-inner {
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* title */
+
+.stat-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* value */
+
+.stat-value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin: 0.15rem 0 0;
+  line-height: 1.2;
+}
+
+/* highlight trend card slightly */
+
+.stat-card-trend {
+  background: linear-gradient(
+    135deg,
+    var(--card-bg-soft),
+    var(--primary-soft)
+  );
+}
+
+/* ========================================
+   Trend Bar
+======================================== */
+
+.trend-bar {
+  margin-top: 0.5rem;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.trend-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: var(--primary-color, #4f46e5);
+  transition: width 0.4s ease;
+}
+
+/* ========================================
+   Cap Message
+======================================== */
+
+.cap-message {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ========================================
+   Today Section
+======================================== */
+
+.today-section {
+  margin-top: 2rem;
+}
+
+/* grid */
+
+.today-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* cards */
+
+.today-card {
+  background: var(--card-bg-soft);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.today-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.today-card-inner {
+  padding: var(--card-padding);
+}
+
+.today-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* content area */
+
+.today-content {
+  min-height: 40px;
+  font-size: 0.95rem;
+}
+
+/* empty state helper (future-proof) */
+
+.today-content:empty::after {
+  content: "No items";
+  opacity: 0.5;
+  font-size: 0.85rem;
+}
+/* awesome fonts */
+.fa-solid {
+  margin-right: 6px;
+}
+/* ===============================
+   ICON COLORS
+================================ */
+
+/* Welcome wave */
+.welcome-section .fa-hand-wave {
+  color: #f59e0b; /* amber */
+}
+
+/* Assignments */
+.today-card .fa-book {
+  color: #3b82f6; 
+}
+
+/* Classes */
+.today-card .fa-school {
+  color: #10b981;
+}
+
+/* Events */
+.today-card .fa-calendar-check {
+  color: #ef4444;
+}
+
+/* Reflection fire */
+.stat-card .fa-fire {
+  color: #f97316;
+}
+
+/* Optional: consistent spacing */
+.fa-solid {
+  margin-right: 6px;
+}
+/* ========================================
+   Responsive Tweaks
+======================================== */
+
+@media (max-width: 768px) {
+  .stats-grid {
+    gap: 0.85rem;
+  }
+
+  .today-grid {
+    gap: 0.85rem;
+  }
+
+  .stat-value {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-inner h2 {
+    font-size: 1.4rem;
+  }
+
+  .stat-card-inner {
+    padding: 1rem;
+  }
+
+  .today-card-inner {
+    padding: 1rem;
+  }
+}

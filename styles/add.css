@@ -1,0 +1,212 @@
+/* ========================================
+   Add Page Base
+======================================== */
+
+.add-page {
+  --add-gap: 1rem;
+  --add-radius: 16px;
+  --add-border: var(--border-color, #e5e7eb);
+  --add-bg: var(--card-bg, #ffffff);
+}
+
+/* wrapper */
+
+.add-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   Page Header
+======================================== */
+
+.add-header {
+  margin-bottom: 1.5rem;
+}
+
+.add-header h2 {
+  margin: 0;
+}
+
+/* ========================================
+   Task Selector
+======================================== */
+
+.task-selector-section {
+  margin-bottom: 1.5rem;
+}
+
+.task-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 320px;
+}
+
+.control-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.control-select {
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--add-border);
+  background: var(--input-bg, #fff);
+  font: inherit;
+  transition: all 0.2s ease;
+}
+
+.control-select:focus {
+  outline: none;
+  border-color: var(--primary-color, #4f46e5);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* ========================================
+   Task Cards
+======================================== */
+
+.task-card {
+  background: var(--add-bg);
+  border: 1px solid var(--add-border);
+  border-radius: var(--add-radius);
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+/* hover lift */
+
+.task-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+/* header */
+
+.task-card-header {
+  padding: 1rem 1.25rem 0.5rem;
+}
+
+.task-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* ========================================
+   Form Layout
+======================================== */
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0.75rem 1.25rem 1.25rem;
+}
+
+/* groups */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* labels */
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* inputs */
+
+.task-form input,
+.task-form select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--add-border);
+  background: var(--input-bg, #fff);
+  font: inherit;
+  transition: all 0.2s ease;
+}
+
+/* focus */
+
+.task-form input:focus,
+.task-form select:focus {
+  outline: none;
+  border-color: var(--primary-color, #4f46e5);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* ========================================
+   Errors
+======================================== */
+
+.error {
+  min-height: 14px;
+  font-size: 0.75rem;
+  color: #dc2626;
+}
+
+/* ========================================
+   Form Actions
+======================================== */
+
+.form-actions {
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-actions .btn,
+.task-form button {
+  min-width: 140px;
+}
+
+/* ========================================
+   Hidden Sections (JS ready)
+======================================== */
+
+.task-section {
+  display: none;
+}
+
+/* default visible handled by JS */
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 768px) {
+  .add-wrapper {
+    max-width: 100%;
+  }
+
+  .task-selector {
+    max-width: 100%;
+  }
+
+  .task-form {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-card-header {
+    padding: 0.9rem 1rem 0.4rem;
+  }
+
+  .task-form {
+    padding: 0.7rem 1rem 1rem;
+  }
+
+  .task-form input,
+  .task-form select {
+    padding: 0.55rem 0.65rem;
+  }
+}
